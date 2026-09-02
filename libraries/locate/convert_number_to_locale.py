@@ -6,4 +6,4 @@ import locale
 
 def convert_number_to_locale(number: int or float):
 
-    pass
+    locale.setlocale(locale.LC_ALL, '')
