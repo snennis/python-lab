@@ -4,7 +4,7 @@
 # library imports
 import locale
 
-def convert_number_to_locale(number: int | float) -> int | float:
+def convert_number_to_locale(number: int | float) -> str | None:
     # set locale to user locale
     locale.setlocale(locale.LC_ALL, '')
 
