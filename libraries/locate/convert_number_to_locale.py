@@ -5,7 +5,7 @@
 import locale
 
 def convert_number_to_locale(number: int | float) -> int | float:
-
+    # set locale to user locale
     locale.setlocale(locale.LC_ALL, '')
 
     # check if number is type int OR float
