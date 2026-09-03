@@ -11,10 +11,18 @@ def convert_number_to_locale(number: int | float) -> int | float:
     # check if number is type int OR float and return the correct formatted value
     match number:
         case int():
-            return int(locale.atoi(str(number)))
+            return locale.format_string(
+                f="%d",
+                val=number,
+                grouping=True
+            )
 
         case float():
-            return float(locale.atof(str(number)))
+            return locale.format_string(
+                f="%f",
+                val=number,
+                grouping=True
+            )
 
         case _:
             raise locale.Error('No Number was given.')
